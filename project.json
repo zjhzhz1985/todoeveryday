@@ -1,0 +1,26 @@
+{
+    "project_type": "javascript",
+
+    "debugMode" : 1,
+    "showFPS" : false,
+    "frameRate" : 60,
+    "id" : "gameCanvas",
+    "renderMode" : 0,
+    "engineDir":"frameworks/cocos2d-html5",
+
+    "modules" : ["cocos2d","extensions", "external"],
+
+    "jsList" : [
+        "src/resource.js",
+        "src/util/InputBar.js",
+        "src/util/LocalStorage.js",
+        "src/util/Date.js",
+        "src/util/Common.js",
+        "src/data/Task.js",
+        "src/data/GlobalVars.js",
+        "src/scene/MainScene.js",
+        "src/scene/SettingScene.js",
+        "src/view/AddLayer.js",
+        "src/view/TaskSprite.js"
+    ]
+}
