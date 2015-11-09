@@ -18,18 +18,36 @@ var AddLayer = cc.Layer.extend({
 
 		//this.isTouchAble = true;
 		//半透明遮罩背景
-		var bgLayer = new cc.LayerColor(cc.color(0,0,0,200), size.width, size.height);
+		//var bgLayer = new cc.LayerColor(cc.color(0,0,0,200), size.width, size.height);
+		var bgLayer = new cc.LayerColor(cc.color(255, 255, 255, 255), size.width, size.height);
 		this.addChild(bgLayer);
 
+		var inputbgSize = cc.size(614, 420);
+
+		var inputbg = new cc.LayerColor(cc.color(232,22,123,255), inputbgSize.width, inputbgSize.height);
+		inputbg.ignoreAnchorPointForPosition(false);
+		inputbg.setAnchorPoint(0.5, 0.5);
+		inputbg.setPosition(size.width / 2, size.height / 2);
+		this.addChild(inputbg);
 
 
-		var inputbgSprite = new cc.Sprite("res/cocosui/input_bg.png");
-		inputbgSprite.attr({
-			anchorX: 0.5,
-			anchorY: 0.5,
-			x: size.width/2,
-			y: size.height/2
-		});
+		var inputbgSprite = new cc.Scale9Sprite("res/lineSquare_black.png");
+		inputbgSprite.setPosition(size.width / 2, size.height / 2);
+		inputbgSprite.setContentSize(cc.size(614,420));
+
+        //
+		//var squareLineSprite = new SquareLineSprite(100, 100, cc.color(28,32,11,255), cc.color(232,22,123,255));
+		//squareLineSprite.setPosition(200, 150);
+		//this.addChild(squareLineSprite);
+
+
+		//var inputbgSprite = new cc.Sprite("res/cocosui/input_bg.png");
+		//inputbgSprite.attr({
+		//	anchorX: 0.5,
+		//	anchorY: 0.5,
+		//	x: size.width / 2,
+		//	y: size.height / 2
+		//});
 		this.addChild(inputbgSprite);
 
 
@@ -45,7 +63,7 @@ var AddLayer = cc.Layer.extend({
 
 		var explainLabel = new cc.LabelTTF("up to 25 characters in length:", "Arial",25);
 		explainLabel.attr({
-			x: 47,
+			x: 48,
 			y: inputbgSprite.height - 45 - titleLabel.getBoundingBox().height - 25,
 			anchorX: 0,
 			anchorY: 0.5,

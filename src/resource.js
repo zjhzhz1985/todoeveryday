@@ -12,7 +12,9 @@ var res = {
     input_bg_png : "res/cocosui/input_bg.png",
     my_edit_png : "res/cocosui/my_edit.png",
     submit_png : "res/cocosui/submit.png",
-    submit_on_png : "res/cocosui/submit_on.png"
+    submit_on_png : "res/cocosui/submit_on.png",
+
+    lineSquare_black_png : "res/lineSquare_black.png"
 
 
 };
